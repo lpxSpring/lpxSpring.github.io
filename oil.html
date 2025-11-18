@@ -171,6 +171,7 @@
             width: 100px; 
             height: 30px;
             margin-left: 395px;
+            background: #FFD700;
         }
 
         .button2 {
@@ -217,7 +218,7 @@
                 <div class="tab-pane active" id="tab1">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
 <!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
-                    <select  class="select1" name="oilIndex" id="oilIndex">
+                    <select  class="select1" name="oilIndex" id="oilIndex" onchange="handleChange_92()">
 <!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">抗爆性_辛烷值</option>
                         <option value="2">蒸发性能_蒸气压（微量法）</option>
@@ -237,7 +238,7 @@
                         <option value="16">密度</option>
                       </select>
                       
-                      <input class="button2" id="oil_92" type="text" placeholder=" 默认值[最小,最大]"><br><br>
+                      <input class="button2" id="oil_92" type="text" placeholder="默认值[92, 93.8]"><br><br>
                       <button class="button1" onclick="myFunction_92()">预测</button>
                       <p class="p" id="content_92_50"></p>
                       <p id="content_92_80"></p>
@@ -247,7 +248,7 @@
                 <div class="tab-pane" id="tab2">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
 <!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
-                    <select  class="select1" name="oilIndex2" id="oilIndex2">
+                    <select  class="select1" name="oilIndex2" id="oilIndex2" onchange="handleChange_95()">
 <!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">抗爆性_辛烷值</option>
                         <option value="2">蒸发性能_蒸气压（微量法）</option>
@@ -267,7 +268,7 @@
                         <option value="16">密度</option>
                       </select>
                       
-                      <input  class="button2" id="oil_95" type="text" placeholder=" 默认值[最小,最大]"><br><br>
+                      <input  class="button2" id="oil_95" type="text" placeholder=" 默认值[95.9, 98.5]"><br><br>
                       <button class="button1" onclick="myFunction_95()">预测</button>
                       <p class="p" id="content_95_50"></p>
                       <p id="content_95_80"></p>
@@ -277,7 +278,7 @@
                 <div class="tab-pane" id="tab3">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
 <!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
-                    <select  class="select1" name="oilIndex3" id="oilIndex3">
+                    <select  class="select1" name="oilIndex3" id="oilIndex3" onchange="handleChange_chaiyou()">
 <!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">氧化安定性</option>
                         <option value="2">硫含量</option>
@@ -298,7 +299,7 @@
                         <option value="17">脂肪酸甲酯（无统计条件）</option>
                       </select>
                       
-                      <input  class="button2" id="oil_chaiyou" type="text" placeholder=" 默认值[最小,最大]"><br><br>
+                      <input  class="button2" id="oil_chaiyou" type="text" placeholder=" 默认值[0.1, 1.1]"><br><br>
                       <button class="button1" onclick="myFunction_chaiyou()">预测</button>
                       <p class="p" id="content_chaiyou_50"></p>
                       <p id="content_chaiyou_80"></p>
@@ -342,6 +343,195 @@
             document.getElementById(tabId).classList.add('active');
         };
 
+    function handleChange_92() {
+        var min = 0;
+        var max = 0;
+        var select = document.getElementById('oilIndex');
+        var oilIndex = select.options[select.selectedIndex].value;
+        console.log(oilIndex);
+        if (0 == oilIndex) {
+            return;
+        } else if (1 == oilIndex) {
+            min = '92';
+            max = '93.8';
+        } else if (2 == oilIndex) {
+            min = '92';
+            max = '93.8';
+        } else if (3 == oilIndex) {
+            min = '50.75';
+            max = '62.4';
+        } else if (4 == oilIndex) {
+            min = '50.75';
+            max = '62.4';
+        } else if (5 == oilIndex) {
+            min = '50.2';
+            max = '58';
+        } else if (6 == oilIndex) {
+            min = '77.5';
+            max = '95.4';
+        } else if (7 == oilIndex) {
+            min = '136.7';
+            max = '169.4';
+        } else if (8 == oilIndex) {
+            min = '182.7';
+            max = '201';
+        } else if (9 == oilIndex) {
+            min = '0.5';
+            max = '2';
+        } else if (10 == oilIndex) {
+            min = '0.5';
+            max = '1.5';
+        } else if (11 == oilIndex) {
+            min = '2';
+            max = '6.1';
+        } else if (12 == oilIndex) {
+            min = '0.39';
+            max = '0.73';
+        } else if (13 == oilIndex) {
+            min = '8';
+            max = '15.2';
+        } else if (14 == oilIndex) {
+            min = '20';
+            max = '33.7';
+        } else if (15 == oilIndex) {
+            min = '0.9';
+            max = '2.21';
+        } else if (16 == oilIndex) {
+            min = '729.6';
+            max = '742.2';
+        } else {
+            document.getElementById('oil_92').setAttribute('placeholder', '');
+            return;
+        }
+        document.getElementById('oil_92').setAttribute('placeholder', ' 默认值[' + min + ', ' + max + ']');
+    };
+
+    function handleChange_95() {
+        var min = 0;
+        var max = 0;
+        var select = document.getElementById('oilIndex2');
+        var oilIndex = select.options[select.selectedIndex].value;
+        console.log(oilIndex);
+        if (0 == oilIndex) {
+            return;
+        } else if (1 == oilIndex) {
+            min = '95.9';
+            max = '98.5';
+        } else if (2 == oilIndex) {
+            min = '95.9';
+            max = '98.5';
+        } else if (3 == oilIndex) {
+            min = '50';
+            max = '61.3';
+        } else if (4 == oilIndex) {
+            min = '50';
+            max = '61.3';
+        } else if (5 == oilIndex) {
+            min = '49';
+            max = '58.8';
+        } else if (6 == oilIndex) {
+            min = '80.8';
+            max = '98.3';
+        } else if (7 == oilIndex) {
+            min = '151.2';
+            max = '168.4';
+        } else if (8 == oilIndex) {
+            min = '183.8';
+            max = '198.1';
+        } else if (9 == oilIndex) {
+            min = '0.5';
+            max = '3';
+        } else if (10 == oilIndex) {
+            min = '0.5';
+            max = '2';
+        } else if (11 == oilIndex) {
+            min = '1.05';
+            max = '6.7';
+        } else if (12 == oilIndex) {
+            min = '0.12';
+            max = '0.48';
+        } else if (13 == oilIndex) {
+            min = '5.3';
+            max = '10.5';
+        } else if (14 == oilIndex) {
+            min = '25.3';
+            max = '32.8';
+        } else if (15 == oilIndex) {
+            min = '2.16';
+            max = '2.6';
+        } else if (16 == oilIndex) {
+            min = '739.1';
+            max = '747';
+        } else {
+            document.getElementById('oil_95').setAttribute('placeholder', '');
+            return;
+        }
+        document.getElementById('oil_95').setAttribute('placeholder', ' 默认值[' + min + ', ' + max + ']');
+    };
+
+    function handleChange_chaiyou() {
+        var min = 0;
+        var max = 0;
+        var select = document.getElementById('oilIndex3');
+        var oilIndex = select.options[select.selectedIndex].value;
+        console.log(oilIndex);
+        if (0 == oilIndex) {
+            return;
+        } else if (1 == oilIndex) {
+            min = '0.1';
+            max = '1.1';
+        } else if (2 == oilIndex) {
+            min = '1.1';
+            max = '6.2';
+        } else if (3 == oilIndex) {
+            min = '1.4';
+            max = '5.66';
+        } else if (4 == oilIndex) {
+            min = '260';
+            max = '440';
+        } else if (5 == oilIndex) {
+            min = '1';
+            max = '3.3';
+        } else if (6 == oilIndex) {
+            min = '1';
+            max = '13';
+        } else if (7 == oilIndex) {
+            min = '3.637';
+            max = '4.424';
+        } else if (8 == oilIndex) {
+            min = '-32';
+            max = '-5';
+        } else if (9 == oilIndex) {
+            min = '-16';
+            max = '-1';
+        } else if (10 == oilIndex) {
+            min = '64';
+            max = '71';
+        } else if (11 == oilIndex) {
+            min = '51.2';
+            max = '56.2';
+        } else if (12 == oilIndex) {
+            min = '50.6';
+            max = '55';
+        } else if (13 == oilIndex) {
+            min = '249.2';
+            max = '272.8';
+        } else if (14 == oilIndex) {
+            min = '326.5';
+            max = '340.5';
+        } else if (15 == oilIndex) {
+            min = '338.7';
+            max = '359.8';
+        } else if (16 == oilIndex) {
+            min = '824.6';
+            max = '832.2';
+        } else {
+            document.getElementById('oil_chaiyou').setAttribute('placeholder', '');
+            return;
+        }
+        document.getElementById('oil_chaiyou').setAttribute('placeholder', ' 默认值[' + min + ', ' + max + ']');
+    };
+
    function myFunction_92() {
       // 触发事件时执行的逻辑代码
       console.log('92# 输入框内容..');
@@ -355,7 +545,6 @@
       var index_80 = '';
 
       var select = document.getElementById('oilIndex');
-      var selectedValue = select.value;
       var oilIndex = select.options[select.selectedIndex].value;
 
       console.log(oilIndex);
