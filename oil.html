@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>石油统计结果预测</title>
+    <title>油品质量预测系统</title>
     <style>
         * {
             margin: 0;
@@ -170,6 +170,12 @@
         .button1 {
             width: 100px; 
             height: 30px;
+            margin-left: 395px;
+        }
+
+        .button2 {
+            width: 150px;
+            height: 30px;
             margin-left: 40px;
         }
 
@@ -196,7 +202,7 @@
 <body>
     <div /*class="container" */ style="width: 1500px; height: 1000px;">
         <header>
-            <h1>石油统计结果预测</h1>
+            <h1>油品质量预测系统</h1>
             <!-- <p class="subtitle">使用纯HTML、CSS和JavaScript实现</p> -->
         </header>
         
@@ -210,9 +216,9 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="tab1">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
-                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>
+<!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
                     <select  class="select1" name="oilIndex" id="oilIndex">
-                        <option value="0">请选择指标名</option> <!-- 默认选项 -->
+<!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">抗爆性_辛烷值</option>
                         <option value="2">蒸发性能_蒸气压（微量法）</option>
                         <option value="3">蒸发性能_蒸气压</option>
@@ -231,7 +237,7 @@
                         <option value="16">密度</option>
                       </select>
                       
-                      <input class="button1" id="oil_92" type="text">
+                      <input class="button2" id="oil_92" type="text" placeholder=" 默认值[最小,最大]"><br><br>
                       <button class="button1" onclick="myFunction_92()">预测</button>
                       <p class="p" id="content_92_50"></p>
                       <p id="content_92_80"></p>
@@ -240,9 +246,9 @@
                 
                 <div class="tab-pane" id="tab2">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
-                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>
+<!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
                     <select  class="select1" name="oilIndex2" id="oilIndex2">
-                        <option value="0">请选择指标名</option> <!-- 默认选项 -->
+<!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">抗爆性_辛烷值</option>
                         <option value="2">蒸发性能_蒸气压（微量法）</option>
                         <option value="3">蒸发性能_蒸气压</option>
@@ -261,7 +267,7 @@
                         <option value="16">密度</option>
                       </select>
                       
-                      <input  class="button1" id="oil_95" type="text">
+                      <input  class="button2" id="oil_95" type="text" placeholder=" 默认值[最小,最大]"><br><br>
                       <button class="button1" onclick="myFunction_95()">预测</button>
                       <p class="p" id="content_95_50"></p>
                       <p id="content_95_80"></p>
@@ -270,9 +276,9 @@
                 
                 <div class="tab-pane" id="tab3">
                     <!-- <h2 class="tab-title">欢迎使用Tab页面组件</h2> -->
-                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>
+<!--                    <p class="tab-text">预测展示50%分布、80%分布的区间的上下限，请先选择指标名，再输入值。</p>-->
                     <select  class="select1" name="oilIndex3" id="oilIndex3">
-                        <option value="0">请选择指标名</option> <!-- 默认选项 -->
+<!--                        <option value="0">请选择指标名</option> &lt;!&ndash; 默认选项 &ndash;&gt;-->
                         <option value="1">氧化安定性</option>
                         <option value="2">硫含量</option>
                         <option value="3">酸度</option>
@@ -292,7 +298,7 @@
                         <option value="17">脂肪酸甲酯（无统计条件）</option>
                       </select>
                       
-                      <input  class="button1" id="oil_chaiyou" type="text">
+                      <input  class="button2" id="oil_chaiyou" type="text" placeholder=" 默认值[最小,最大]"><br><br>
                       <button class="button1" onclick="myFunction_chaiyou()">预测</button>
                       <p class="p" id="content_chaiyou_50"></p>
                       <p id="content_chaiyou_80"></p>
