@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-title: oil.ai.lpx.com
-description: oil.ai.lpx.com
+#title: oil.ai.lpx.com
+#description: oil.ai.lpx.com
 url: "https://www.oil.ai.lpx.com"   # 网站的主 URL（用于生成绝对链接）
 baseurl: ""                      # 通常留空，除非部署在子路径
