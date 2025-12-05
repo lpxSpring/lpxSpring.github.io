@@ -1,2 +1,8 @@
-# lpxSpring.github.io
-oilDemo
+---
+layout: none
+title: Home
+---
+
+# Welcome to my site!
+
+Current time: {{ site.time }}
